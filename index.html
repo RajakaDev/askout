@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>💖 Forever With You</title>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌸 Scene 1 -->
+<section class="scene active" id="scene1">
+  <h1>Enter Our Secret Code ❤️</h1>
+  <input id="codeInput" placeholder="Tap to type..." />
+  <button onclick="checkCode()">Unlock 💖</button>
+
+  <div id="errorBox">
+    <img src="images/mochi-cat.gif"/>
+    <p>Please Look My Heart 💔</p>
+  </div>
+</section>
+
+<!-- ⏳ Scene 2 -->
+<section class="scene" id="scene2">
+  <h2>Get ready for something special…</h2>
+  <img class="cuteAnim" src="images/a11060176e434e78f2c414d514dc28a2.gif"/>
+  <div id="countdown">5</div>
+  <audio id="heartbeat" src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-1103.mp3"></audio>
+</section>
+
+<!-- 💕 Scene 3 -->
+<section class="scene" id="scene3">
+  <h1>Will you be my Valentine? 💕</h1>
+
+  <img id="emotionImg" class="emotion-img"
+       src="images/sec3.gif"/>
+
+  <p id="noMessage">Please Don’t Say No🥺</p>
+
+  <div class="btn-group">
+    <button id="yesBtn" onclick="yesClick()">YES ❤️</button>
+    <button id="noBtn" onclick="noClick()">NO 🙈</button>
+  </div>
+
+  <div id="heartRain"></div>
+</section>
+
+<!-- 💕 Scene 4 -->
+
+<section class="scene" id="scene4">
+  <div class="date">8th February 2026</div>
+
+  <p class="whisper" id="whisperText">
+  <b>Hey,my heart has been whispering something to me<br/>
+  and I think it’s finally time to tell you…</b>
+</p>
+
+  <div class="dream">
+    <img src="images/say.gif"/>
+    <p>I can’t wait sharing some beautiful moments together 💕</p>
+  </div>
+
+  <p class="footer-love hidden" id="loveText">
+  I made this code just to show you how deeply I'm in love with you.<br/>
+  Every line of it reflects how I feel ❤️
+</p>
+
+  <button onclick="goScene(5)">Continue 💌</button>
+</section>
+
+<!-- ✉️ Scene 5 -->
+<section class="scene" id="scene5">
+  <div class="envelope-wrap" onclick="openEnvelope()">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+  <div id="letterPopup">
+    <pre id="letterText"></pre>
+    <button onclick="goScene(6)">Forever 💍</button>
+  </div>
+</section>
+
+<!-- 💍 Scene 6 -->
+<section class="scene forever" id="scene6">
+  <h1>Our Story Begins Today💫</h1>
+  <p>Just U and Me — Forever💍 </p>
+  <div class="ring">💍</div>
+</section>
+
+<audio id="romanticMusic" loop>
+  <source src="sound/vibehorn-romantic-piano-431010.mp3"/>
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
